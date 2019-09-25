@@ -15,17 +15,18 @@
 
       <h2>Sign in</h2>
       <form id="sign in">
-        <input name="book[title]" type="text" placeholder="User name">
         <!-- //copy "sign-up" info here -->
-        <input name="book[author]" type="text" placeholder="Password">
+        <input type="email" name="credentials[email]" placeholder='Enter email'>
+      <input type="password" name="credentials[password]" placeholder='Enter password'>
         <button type="submit">Sign in</button>
       </form>
 
       <h2>Sign up</h2>
       <form id="sign up">
-        <input name="book[title]" type="text" placeholder="User name">
+        <input type="email" name="credentials[email]" placeholder='Enter email'>
         <!-- //copy "sign-up" info here -->
-        <input name="book[author]" type="text" placeholder="Password">
+        <input type="password" name="credentials[password]" placeholder='Enter password'>
+        <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
         <button type="submit">Sign up</button>
       </form>
     </body>
