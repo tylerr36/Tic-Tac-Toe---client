@@ -7,5 +7,9 @@
 // require('./example')
 
 $(() => {
+  $('#sign-up').on('submit', function (event) {
+    event.preventDefault()
+    console.log(event.target)
+  })
   // your JS code goes here
 })
