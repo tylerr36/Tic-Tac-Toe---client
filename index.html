@@ -12,17 +12,14 @@
     </head>
     <body>
       <h1>Tic-Tac-Toe!</h1>
-      <div class="row">
-              <div class="col-4 border">sq1.col-4</div>
-              <div class="col-4 border">sq2.col-4</div>
-              <div class="col-4 border">sq3.col-4</div>
-              <div class="col-4 border">sq4.col-4</div>
-              <div class="col-4 border">sq5.col-4</div>
-              <div class="col-4 border">sq6.col-4</div>
-              <div class="col-4 border">sq7.col-4</div>
-              <div class="col-4 border">sq8.col-4</div>
-              <div class="col-4 border">sq9.col-4</div>
-        </div>
+        <h2 id="message"></h2>
+        <h2>Sign up</h2>
+        <form id="sign-up">
+          <input type="email" name="credentials[email]" placeholder='Enter email'>
+          <input type="password" name="credentials[password]" placeholder='Enter password'>
+          <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+          <button type="submit">Sign up</button>
+        </form>
 
       <h2>Sign in</h2>
       <form id="sign-in">
@@ -32,12 +29,20 @@
         <button type="submit">Sign in</button>
       </form>
 
-      <h2>Sign up</h2>
-      <form id="sign-up">
-        <input type="email" name="credentials[email]" placeholder='Enter email'>
-        <input type="password" name="credentials[password]" placeholder='Enter password'>
-        <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
-        <button type="submit">Sign up</button>
-      </form>
+
+    <div class="container" id="main">
+      <div class="row">
+              <div id="0" class="col-4 border"></div>
+              <div id="1" class="col-4 border"></div>
+              <div id="2" class="col-4 border"></div>
+              <div id="3" class="col-4 border"></div>
+              <div id="4" class="col-4 border"></div>
+              <div id="5" class="col-4 border"></div>
+              <div id="6" class="col-4 border"></div>
+              <div id="7" class="col-4 border"></div>
+              <div id="8" class="col-4 border"></div>
+        </div>
+    </div>
+
     </body>
 </html>
