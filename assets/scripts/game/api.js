@@ -16,7 +16,18 @@ const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-in',
-    data: formData
+    data: formData,
+    success: function () {
+      $('#sign-out').show()
+      $('#sign-in').hide()
+      $('#sign-up').hide()
+      $('#message').hide()
+      $('.signin').hide()
+      $('.signup').hide()
+      $('#createGame').show()
+      $('#change-password').show()
+      $('#changePassword').show()
+    }
   })
 }
 
@@ -37,12 +48,22 @@ const signOut = function () {
     url: config.apiUrl + '/sign-out',
     headers: {
       Authorization: 'Token token=' + store.user.token
+    },
+    success: function () {
+      $('.cell').hide()
+      $('#createGame').hide()
+      $('#change-password').hide()
+      $('.changepassword').hide()
+      $('#sign-in').show()
+      $('.signin').show()
+      $('#sign-up').show()
+      $('.signup').show()
+      $('#getstats').hide()
     }
   })
 }
 
-const createGame = function () {
-}
+const createGame = function () {}
 
 module.exports = {
   signUp,

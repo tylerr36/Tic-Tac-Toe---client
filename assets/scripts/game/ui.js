@@ -28,7 +28,13 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
   console.log('responseData is', responseData)
-  // add .hide somewhere in here
+  $('.game').show()
+  $('#sign-out').show()
+  $('#change-password').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+
+  // add .hide somewhere in here using jQuery
   //  save the 'user' we got from the API inside of 'store' so we
   //  can use it later from any file
   store.user = responseData.user

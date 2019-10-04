@@ -12,30 +12,34 @@
     </head>
     <body>
       <h1>Tic-Tac-Toe!</h1>
-        <h2 id="message"></h2>
-        <h2>Sign up</h2>
-        <form id="sign-up">
+      <section class="signUpSection">
+      <h2 class ='signup'>Sign up</h2>
+      <form id="sign-up">
           <input type="email" name="credentials[email]" placeholder='Enter email'>
           <input type="password" name="credentials[password]" placeholder='Enter password'>
           <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
           <button type="submit">Sign up</button>
         </form>
+      </section>
 
-      <h2>Sign in</h2>
+      <section class="signInSection">
+      <h2 class ='signin'>Sign in</h2>
       <form id="sign-in">
         <!-- //copy "sign-up" info here -->
         <input type="email" name="credentials[email]" placeholder='Enter email'>
       <input type="password" name="credentials[password]" placeholder='Enter password'>
         <button type="submit">Sign in</button>
       </form>
+    </section>
 
-      <h2>Change Password</h2>
-      <form id='change-password'>
-        <input type="email" name="credentials[email]" placeholder='Enter email'>
+      <section class="changePasswordSection">
+      <h2 class ='changepassword'>Change Password</h2>
+      <form id="change-password">
         <input type="password" name="passwords[old]" placeholder='Enter old password'>
         <input type="password" name="passwords[new]" placeholder='Enter new password'>
         <button>Change Password</button>
       </form>
+    </section>
 
 <br></br>
 
@@ -60,6 +64,9 @@
         </div>
       </div>
 
+  <form id="sign-out">
+    <button id="signout">Sign Out</button>
+  </form>
 
     </body>
 </html>
