@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic-Tac-Toe!</h1>
-      <section class="signUpSection">
-      <h2 class ='signup'>Sign up</h2>
-      <form id="sign-up">
-          <input type="email" name="credentials[email]" placeholder='Enter email'>
-          <input type="password" name="credentials[password]" placeholder='Enter password'>
-          <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
-          <button type="submit">Sign up</button>
-        </form>
-      </section>
+  <!-- Do not add `link` tags-->
 
-      <section class="signInSection">
-      <h2 class ='signin'>Sign in</h2>
-      <form id="sign-in">
-        <!-- //copy "sign-up" info here -->
-        <input type="email" name="credentials[email]" placeholder='Enter email'>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>Tic-Tac-Toe!</h1>
+  <div id="message"></div>
+  <div class="before-sign-in">
+    <form id="sign-up">
+      <h2 class='signup'>Sign up</h2>
+      <input type="email" name="credentials[email]" placeholder='Enter email'>
       <input type="password" name="credentials[password]" placeholder='Enter password'>
-        <button type="submit">Sign in</button>
-      </form>
-    </section>
+      <input type="password" name="credentials[password_confirmation]" placeholder='Enter password again'>
+      <button type="submit">Sign up</button>
+    </form>
 
-      <section class="changePasswordSection">
-      <h2 class ='changepassword'>Change Password</h2>
-      <form id="change-password">
-        <input type="password" name="passwords[old]" placeholder='Enter old password'>
-        <input type="password" name="passwords[new]" placeholder='Enter new password'>
-        <button>Change Password</button>
-      </form>
-    </section>
+    <form id="sign-in">
+      <h2 class='signin'>Sign in</h2>
+      <!-- //copy "sign-up" info here -->
+      <input type="email" name="credentials[email]" placeholder='Enter email'>
+      <input type="password" name="credentials[password]" placeholder='Enter password'>
+      <button type="submit">Sign in</button>
+    </form>
+  </div>
 
-<br></br>
+  <div class="after-sign-in hide">
+    <form id="change-password">
+      <h2 class='changepassword'>Change Password</h2>
+      <input type="password" name="passwords[old]" placeholder='Enter old password'>
+      <input type="password" name="passwords[new]" placeholder='Enter new password'>
+      <button>Change Password</button>
+    </form>
 
-      <div class="game-buttons">
-          <button class="start-game" type="button">Start New Game!</button>
-          <button class="end-game">End Game</button>
-      </div>
+    <form id="sign-out">
+      <button id="signout">Sign Out</button>
+    </form>
 
-<br></br>
+    <div class="game-buttons">
+      <button class="start-game" type="button">Start New Game!</button>
+      <button class="end-game">End Game</button>
+    </div>
+
+    <br></br>
 
     <div class="container" id="main">
       <div class="row">
-              <div id="0" class="col-4 border"></div>
-              <div id="1" class="col-4 border"></div>
-              <div id="2" class="col-4 border"></div>
-              <div id="3" class="col-4 border"></div>
-              <div id="4" class="col-4 border"></div>
-              <div id="5" class="col-4 border"></div>
-              <div id="6" class="col-4 border"></div>
-              <div id="7" class="col-4 border"></div>
-              <div id="8" class="col-4 border"></div>
-        </div>
+        <div id="0" class="col-4 border"></div>
+        <div id="1" class="col-4 border"></div>
+        <div id="2" class="col-4 border"></div>
+        <div id="3" class="col-4 border"></div>
+        <div id="4" class="col-4 border"></div>
+        <div id="5" class="col-4 border"></div>
+        <div id="6" class="col-4 border"></div>
+        <div id="7" class="col-4 border"></div>
+        <div id="8" class="col-4 border"></div>
       </div>
+    </div>
+  </div>
 
-  <form id="sign-out">
-    <button id="signout">Sign Out</button>
-  </form>
 
-    </body>
+</body>
+
 </html>

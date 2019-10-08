@@ -7,12 +7,14 @@ const successMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('failure')
   $('#message').addClass('success')
+  $('form').trigger('reset')
 }
 
 const failureMessage = function (newText) {
   $('#message').text(newText)
   $('#message').removeClass('success')
   $('#message').addClass('failure')
+  $('form').trigger('reset')
 }
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
@@ -28,11 +30,8 @@ const onSignUpFailure = function () {
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
   console.log('responseData is', responseData)
-  $('.game').show()
-  $('#sign-out').show()
-  $('#change-password').show()
-  $('#sign-up').hide()
-  $('#sign-in').hide()
+  $('.after-sign-in').show()
+  $('.before-sign-in').hide()
 
   // add .hide somewhere in here using jQuery
   //  save the 'user' we got from the API inside of 'store' so we
@@ -41,6 +40,9 @@ const onSignInSuccess = function (responseData) {
   console.log('store is', store)
   // can hide signIn button after signing in by putting   $('#sign-in').hide here
 }
+
+// store.game = responseData.game
+// click button, call to api, store data...in store
 
 const onSignInFailure = function () {
   failureMessage('Sign in failed.')
@@ -56,6 +58,8 @@ const onChangePasswordFailure = function () {
 
 const onSignOutSuccess = function () {
   successMessage('Signed out successfully!')
+  $('.after-sign-in').hide()
+  $('.before-sign-in').show()
 }
 
 const onSignOutFailure = function () {

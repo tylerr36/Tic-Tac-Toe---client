@@ -16,20 +16,18 @@ const signIn = function (formData) {
   return $.ajax({
     method: 'POST',
     url: config.apiUrl + '/sign-in',
-    data: formData,
-    success: function () {
-      $('#sign-out').show()
-      $('#sign-in').hide()
-      $('#sign-up').hide()
-      $('#message').hide()
-      $('.signin').hide()
-      $('.signup').hide()
-      $('#createGame').show()
-      $('#change-password').show()
-      $('#changePassword').show()
-    }
+    data: formData
   })
 }
+
+//url: config.apiUrl + '/games',
+//data: {}
+// headers: {
+//  Authorization: 'Token token=' + store.user.token
+ // },
+ // addPOST
+// Listen for click on "New game" button and run event handler to call API
+
 
 const changePassword = function (formData) {
   return $.ajax({
