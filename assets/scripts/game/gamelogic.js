@@ -55,6 +55,7 @@ const onClick = function (event) {
   console.log(gameBoard)
 
   // if top row matches
+  // const winCombinations = [
   //   [0, 1, 2],
   //   [3, 4, 5],
   //   [6, 7, 8],
@@ -64,8 +65,17 @@ const onClick = function (event) {
   //   [0, 4, 8],
   //   [2, 4, 6]
 
-  if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
-    console.log('winner is ' + gameBoard[0])
+  // first two lines of code word. Console.log needs to be changed so it says
+  // "winner is the most recently played space" rather than a particular space
+  if ((gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) ||
+  (gameBoard[3] !== '' && gameBoard[3] === gameBoard[4] && gameBoard[4] === gameBoard[5]) ||
+  (gameBoard[6] !== '' && gameBoard[6] === gameBoard[7] && gameBoard[7] === gameBoard[8]) ||
+  (gameBoard[0] !== '' && gameBoard[0] === gameBoard[3] && gameBoard[3] === gameBoard[6]) ||
+  (gameBoard[1] !== '' && gameBoard[1] === gameBoard[4] && gameBoard[4] === gameBoard[7]) ||
+  (gameBoard[2] !== '' && gameBoard[2] === gameBoard[5] && gameBoard[5] === gameBoard[8]) ||
+  (gameBoard[0] !== '' && gameBoard[0] === gameBoard[4] && gameBoard[4] === gameBoard[8]) ||
+  (gameBoard[2] !== '' && gameBoard[2] === gameBoard[4] && gameBoard[4] === gameBoard[6])) {
+    console.log('winner is ' + gameBoard[5])
     gameOver = true
     // add a message to the DOM
     // do not let user play anymore
