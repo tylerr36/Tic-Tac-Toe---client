@@ -15,6 +15,11 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
   $('.border').on('click', gameEvents.onClick)
+  $('.start-game').on('click', authEvents.onCreateGame)
+
+  // when start game button is clicked, run a function to gameEvents.playGame
+        // remove the hide class from the #main element (board)
+
   // $('#board').on('click', gameEvents.playGame)
 
   // $('#sign-up').on('submit', function (event) {

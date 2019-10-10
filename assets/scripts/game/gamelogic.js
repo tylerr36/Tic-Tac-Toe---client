@@ -18,36 +18,33 @@
 */
 
 const gameBoard = ['', '', '', '', '', '', '', '', '']
-const winCombinations = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6]
-]
+
 const playerOne = 'X'
 const playerTwo = 'O'
 
 // const winCombos =
 // start game with X/playerOne
 let player = playerOne
+
+let gameOver = false
 /* Add some css/confirmation of clicks (stretch goal)
 */
 const onClick = function (event) {
   // event = Event is the click happening in app.js
   // target = takes the specific html element (div for this example) that's
   // been clicked
-  if ($(event.target).text() === '') {
+  const position = event.target.id
+
+  if ($(event.target).text() === '' && gameOver === false) {
     if (player === playerOne) {
       $(event.target).text('X')
+      gameBoard[position] = 'X'
       // add message saying "O's turn"
       // check for x winner
       player = playerTwo
     } else if (player === playerTwo) {
       $(event.target).text('O')
+      gameBoard[position] = 'O'
       // add message saying "X's turn"
       // check for o winner
       player = playerOne
@@ -55,10 +52,28 @@ const onClick = function (event) {
   } else {
     console.log('Already clicked!')
   }
+  console.log(gameBoard)
+
+  // if top row matches
+  //   [0, 1, 2],
+  //   [3, 4, 5],
+  //   [6, 7, 8],
+  //   [0, 3, 6],
+  //   [1, 4, 7],
+  //   [2, 5, 8],
+  //   [0, 4, 8],
+  //   [2, 4, 6]
+
+  if (gameBoard[0] !== '' && gameBoard[0] === gameBoard[1] && gameBoard[1] === gameBoard[2]) {
+    console.log('winner is ' + gameBoard[0])
+    gameOver = true
+    // add a message to the DOM
+    // do not let user play anymore
+  }
 }
 
 module.exports = {
   onClick,
-  gameBoard,
-  winCombinations
+  gameBoard
+//  winCombinations
 }
