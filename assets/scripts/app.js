@@ -18,7 +18,7 @@ $(() => {
   $('.start-game').on('click', authEvents.onCreateGame)
 
   // when start game button is clicked, run a function to gameEvents.playGame
-        // remove the hide class from the #main element (board)
+  // remove the hide class from the #main element (board)
 
   // $('#board').on('click', gameEvents.playGame)
 
