@@ -65,8 +65,7 @@ const onClick = function (event) {
   //   [0, 4, 8],
   //   [2, 4, 6]
 
-  // first two lines of code work. Console.log needs to be changed so it says
-  // "winner is the most recently played space" rather than a particular space
+
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
     (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
     (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') ||
@@ -94,6 +93,21 @@ const onClick = function (event) {
     // add a message to the DOM
     // do not let user play anymore
   }
+
+  // Tie. Trying to say "if every array item contains either an X or an O but
+  // gameOver = false, then by definition, it must be a tie".
+  // Whoa, it worked on the first try!
+  if (((gameBoard[0] === 'O' || gameBoard[0] === 'X') &&
+      (gameBoard[1] === 'O' || gameBoard[1] === 'X') &&
+      (gameBoard[2] === 'O' || gameBoard[2] === 'X') &&
+      (gameBoard[3] === 'O' || gameBoard[3] === 'X') &&
+      (gameBoard[4] === 'O' || gameBoard[4] === 'X') &&
+      (gameBoard[5] === 'O' || gameBoard[5] === 'X') &&
+      (gameBoard[6] === 'O' || gameBoard[6] === 'X') &&
+      (gameBoard[7] === 'O' || gameBoard[7] === 'X') &&
+      (gameBoard[8] === 'O' || gameBoard[8] === 'X')) &&
+    gameOver === false)
+    console.log('It is a tie!')
 }
 
 module.exports = {
