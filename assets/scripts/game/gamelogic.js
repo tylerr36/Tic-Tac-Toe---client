@@ -65,7 +65,6 @@ const onClick = function (event) {
   //   [0, 4, 8],
   //   [2, 4, 6]
 
-
   if ((gameBoard[0] === 'X' && gameBoard[1] === 'X' && gameBoard[2] === 'X') ||
     (gameBoard[3] === 'X' && gameBoard[4] === 'X' && gameBoard[5] === 'X') ||
     (gameBoard[6] === 'X' && gameBoard[7] === 'X' && gameBoard[8] === 'X') ||
@@ -75,6 +74,7 @@ const onClick = function (event) {
     (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
     (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
     console.log('X wins!')
+    $('#player').text('X IS THE CHAMPION!')
     gameOver = true
     // add a message to the DOM
     // do not let user play anymore
@@ -89,6 +89,7 @@ const onClick = function (event) {
     (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') ||
     (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
     console.log('O wins!')
+    $('#player').text('O IS THE CHAMPION!')
     gameOver = true
     // add a message to the DOM
     // do not let user play anymore
@@ -107,7 +108,7 @@ const onClick = function (event) {
       (gameBoard[7] === 'O' || gameBoard[7] === 'X') &&
       (gameBoard[8] === 'O' || gameBoard[8] === 'X')) &&
     gameOver === false)
-    console.log('It is a tie!')
+    $('#player').text('GAME IS A TIE!')
 }
 
 module.exports = {

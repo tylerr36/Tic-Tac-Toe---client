@@ -18,7 +18,6 @@ const failureMessage = function (newText) {
 }
 const onSignUpSuccess = function () {
   successMessage('Signed up successfully!')
-  console.log('Successfully reached onSignUpSuccess')
 }
 
 const onSignUpFailure = function () {

@@ -6,7 +6,6 @@ const ui = require('./ui')
 
 const onSignUp = function (event) {
   event.preventDefault()
-  console.log('reached onSignUp')
   const form = event.target
   const formData = getFormFields(form)
   api.signUp(formData)
@@ -16,7 +15,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-  console.log('reached onSignIn')
   const form = event.target
   // add a .hide somewhere in here
   const formData = getFormFields(form)
