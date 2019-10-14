@@ -1,11 +1,10 @@
 # Tic - Tac - Toe
 
+This game allows two people two play Tic-Tac-Toe under a single person's username on a single machine. The number of games played per user is tracked (...not yet, with my game) through an API, so that user's individual statistics can be displayed as their request. Unfortunately, at this point, the screen must be refreshed to restart the game.
 
+## Important Links
 
-A single player game that allows the user to create an account and play tic tac toe
-against a second player on the same machine. Game statitistics and accounts
-are tracked through an API that allows the game engine to display results unique
-to each account.
+- [Deployed Tic Tac Toe Client](https://tylerr36.github.io/Tic-Tac-Toe---client/)
 
 # Technologies Used
 
@@ -22,24 +21,20 @@ to each account.
 
 - I found problem-solving to be more difficult than anticipated, because of the many small differences within classmates' code, and the code of people online. Understanding how someone's function name aligned with one of mine was a challenge, as well as figuring out where else their code differed from mine, so as to not blindly follow issue queue advice which would potentially only work properly for their specific code.
 
--A friend (and NYC GA 2015 WDI alum working at Rockstar Games) helped me better understand jQuery, which immediately solved many of my problems pertaining to text appearing on screen. 
+- A friend (and NYC GA 2015 WDI alum working at Rockstar Games) helped me better understand jQuery, which immediately solved many of my problems pertaining to text appearing on screen.
 
-[Wireframe](wireframe.png)
-[User Story](userstory.png)
+[Wireframe](https://i.imgur.com/WJev1dH.jpg)
+[User Stories](https://i.imgur.com/elCUhXg.png)
 
-# Version Documentation
-
-Numbers before the . represents each game engine, CSS, and HTML update.
-Numbers after the . represents each API update. If 0, no update added.
 
 # Unsolved Problems
 
--I thoroughly enjoyed working out the logic behind how code should be organized (ex. What's the most efficient way to alternate clicks between X and O? What's the most efficient way to find a winner?), but greatly struggled with how to then create code with the propoer syntax in the correct/logical file. While issues may have arisen, I found myself wanting to put all JS in a single file.
+- I thoroughly enjoyed working out the logic behind how code should be organized (ex. What's the most efficient way to alternate clicks between X and O? What's the most efficient way to find a winner?), but greatly struggled with how to then create code with the propoer syntax in the correct/logical file. While issues may have arisen, I found myself wanting to put all JS in a single file.
 
--At the end of a game, the "Start New Game" button clears the board, but not the gameboard array.
+- At the end of a game, the "Start New Game" button clears the board, but not the gameboard array.
 
--Games are not tied to a user (I found teh )
+- Games are not yet tied to a user.
 
-- Would like to display game results for each player.
-- Organize more actions from events.js into ui.js.
-- I need to work on my deployment after each commit.
+- The created game message does not disappear.
+
+- I would eventually like to add CSS and perhaps even sounds, so that the game is fun for users, rather than simply functional.
