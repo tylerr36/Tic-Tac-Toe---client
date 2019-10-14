@@ -27,9 +27,10 @@ const playerTwo = 'O'
 let player = playerOne
 
 let gameOver = false
+
 /* Add some css/confirmation of clicks (stretch goal)
  */
-const onClick = function (event) {
+const onClick = function(event) {
   // event = Event is the click happening in app.js
   // target = takes the specific html element (div for this example) that's
   // been clicked
@@ -42,17 +43,18 @@ const onClick = function (event) {
       // add message saying "O's turn"
       // check for x winner
       player = playerTwo
+      $('#player').text('Your turn, O!')
     } else if (player === playerTwo) {
       $(event.target).text('O')
       gameBoard[position] = 'O'
       // add message saying "X's turn"
       // check for o winner
       player = playerOne
+      $('#player').text('Your turn, X!')
     }
   } else {
-    console.log('Already clicked!')
+    $('#player').text('Already clicked!')
   }
-  console.log(gameBoard)
 
   // if top row matches
   // const winCombinations = [
@@ -73,7 +75,6 @@ const onClick = function (event) {
     (gameBoard[2] === 'X' && gameBoard[5] === 'X' && gameBoard[8] === 'X') ||
     (gameBoard[0] === 'X' && gameBoard[4] === 'X' && gameBoard[8] === 'X') ||
     (gameBoard[2] === 'X' && gameBoard[4] === 'X' && gameBoard[6] === 'X')) {
-    console.log('X wins!')
     $('#player').text('X IS THE CHAMPION!')
     gameOver = true
     // add a message to the DOM
@@ -88,7 +89,6 @@ const onClick = function (event) {
     (gameBoard[2] === 'O' && gameBoard[5] === 'O' && gameBoard[8] === 'O') ||
     (gameBoard[0] === 'O' && gameBoard[4] === 'O' && gameBoard[8] === 'O') ||
     (gameBoard[2] === 'O' && gameBoard[4] === 'O' && gameBoard[6] === 'O')) {
-    console.log('O wins!')
     $('#player').text('O IS THE CHAMPION!')
     gameOver = true
     // add a message to the DOM

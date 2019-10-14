@@ -28,7 +28,6 @@ const onSignUpFailure = function () {
 // In this case, it has our 'user' and our 'user's token'
 const onSignInSuccess = function (responseData) {
   successMessage('Signed in successfully!')
-  console.log('responseData is', responseData)
   $('.after-sign-in').show()
   $('.before-sign-in').hide()
 
@@ -36,7 +35,6 @@ const onSignInSuccess = function (responseData) {
   //  save the 'user' we got from the API inside of 'store' so we
   //  can use it later from any file
   store.user = responseData.user
-  console.log('store is', store)
   // can hide signIn button after signing in by putting   $('#sign-in').hide here
 }
 
@@ -67,7 +65,6 @@ const onSignOutFailure = function () {
 
 const onCreateGameSuccess = function (responseData) {
   successMessage('Created new game!')
-  console.log('New Game Success!')
   store.game = responseData.game
   $('.border').text('')
   $('#main').removeClass('hide')
@@ -75,7 +72,6 @@ const onCreateGameSuccess = function (responseData) {
 
 const onCreateGameFailure = function () {
   failureMessage('Game creation failed!')
-  console.log('Game creation failed!')
   $('.game').text('')
 }
 

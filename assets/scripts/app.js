@@ -18,12 +18,4 @@ $(() => {
 
   // when start game button is clicked, run a function to gameEvents.playGame
   // remove the hide class from the #main element (board)
-
-  // $('#board').on('click', gameEvents.playGame)
-
-  // $('#sign-up').on('submit', function (event) {
-  // event.preventDefault()
-  // console.log(event.target)
-  // })
-  // your JS code goes here
 })
